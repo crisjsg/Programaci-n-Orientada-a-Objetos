@@ -8,38 +8,45 @@ class Hora ():
 		self.segundos = int(segundos)
 
 	# Propiedades públicas de la clase #
-	def setHora(self, horas):
-		self.hora     = int(hora)
-		#if horas in range (0, 25):
-		#	self.horas  = int(horas)
-		#else:
-			#self.horas = 0
+	def setHora( self, hora):
+		#self.hora     = int(hora)
+		if hora in range (0, 25):
+			self.hora  = int(hora)
+		else:
+			self.hora = 0            
 	def getHora(self):
-		return [hora, minutos, segundos]
+		return [self.hora, self.minutos, self.segundos]
 
 	def setMinutos(self, minutos):
-		self.minutos  = int(minutos)
-		#if minutos in range (0, 60):
-		#	self.minutos  = int(minutos)
-		#else:
-			#self.minutos = 0
+		#self.minutos  = int(minutos)
+		if minutos in range (0, 60):
+			self.minutos  = int(minutos)
+		else:
+			self.minutos = 0
 	def getMinutos(self):
 		return self.minutos
 
 	def setSegundos(self, segundos):
-		self.segundos = int(segundos)
-		#if segundos in range (0, 60):
-		#	self.segundos  = int(segundos)
-		#else:
-			#self.segundos = 0
+		#self.segundos = int(segundos)
+		if segundos in range (0, 60):
+			self.segundos  = int(segundos)
+		else:
+			self.segundos = 0
 	def getSegundos(self):
 		return self.segundos
 
 	def imprimirHora(self):
-		return hora,":", minutos, ":", segundos
+		return (self.hora, ":", self.minutos, ":", self.segundos)
 
 
 #tests
 
 miHora = Hora()
-print (miHora.imprimirHora())
+miHora.setHora(20)
+#miHora.setHora( 20, 15, 44 )
+miHora.setMinutos(13)
+miHora.setSegundos(35)
+
+print( miHora.getHora())
+print (miHora.getMinutos(), "minutos")
+print (miHora.getSegundos(), "segundos")
