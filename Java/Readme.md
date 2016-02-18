@@ -2,6 +2,7 @@
 
 
 Todos los ejercicios en [Java][2] que he resuelto en clase de programación.
+A medida que vayamos haciendo y resolviendo ejercicios con este lenguaje los iré subiendo aquí.
 
 En caso de que vierais algo que pudiera ser refactorizado no dudeis en contactar conmigo!
 
