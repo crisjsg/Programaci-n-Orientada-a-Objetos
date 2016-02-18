@@ -1,5 +1,4 @@
-![python][1]
-# Programación Orientada a Objetos
+# Programación Orientada a Objetos ![python][1]
 
 
 Todos los ejercicios, trabajos o proyectos en [Python][2] que he ido realizando en clase de programación y que siguen el paradigma de POO.
