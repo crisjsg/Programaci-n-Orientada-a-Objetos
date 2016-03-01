@@ -4,6 +4,7 @@ import java.util.TreeSet;
 public class MainEjercicioConjuntos {
 
 	public static void main(String[] args) {
+		//Prueba EGit
 		
 		String[] frasesTest = new String[] {
 				"dabale arroz a la zorra el abad", "come helados el niño", "van a clase los chavales"
