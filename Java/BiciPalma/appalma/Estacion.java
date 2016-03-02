@@ -1,5 +1,5 @@
 package appalma;
-//Prueba
+
 //Importaciones
 import java.util.concurrent.ThreadLocalRandom;
 import appalma.Bicicleta;
