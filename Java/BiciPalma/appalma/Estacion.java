@@ -66,12 +66,11 @@ public class Estacion {
 	}
 	
 	public Integer anclajesLibres(){
-		//System.out.println("Numero de anclajes libres: " + this.getNumeroAnclajes());
 		for(int i = 0; i < anclajes.length; i++){
 			if(anclajes[i] == null){
 				this.setAnclajesLibres(this.getAnclajesLibres() + 1);
 			} else{
-				//En caso de no estar libre no harï¿½ nada.
+				//En caso de no estar libre no harÃ¯Â¿Â½ nada.
 			}
 		}
 		return (this.getAnclajesLibres());
@@ -81,7 +80,7 @@ public class Estacion {
 	public void consultarAnclajes(){
 		for(int i = 0; i < anclajes.length; i++){
 			if(anclajes[i] != null){
-				System.out.println("Anclaje " + i + " " + anclajes[i].getId()); // el anclaje de la bici es la posiciÃ³n del array + 1
+				System.out.println("Anclaje " + i + " " + anclajes[i].getId()); 
 			}else{
 				System.out.println("Anclaje " + i + " libre");
 			}
@@ -124,15 +123,15 @@ public class Estacion {
 		
 	public void retirarBicicleta(TarjetaUsuario tarjetaUsuario){
 		if(tarjetaUsuario.getActivada() == true){
-			System.out.println("Tu tarjeta está activada.");
+			System.out.println("Tu tarjeta estÃ¡ activada.");
 			int numeroAnclaje = generarAnclaje();
 			Bicicleta bicicleta;
-			System.out.println(mostrarBicicleta(bicicleta, numeroAnclaje); //Falla aquí
+			System.out.println(mostrarBicicleta(bicicleta, numeroAnclaje); 
 			anclajes[numeroAnclaje] = null;
 			
 		}else{ 
-			System.out.println("Tu tarjeta no está activada. Para usar este servicio es necesario que la tarjeta esté activada.");
-			System.out.println("Para más información dirigase al Ayuntamiento.");
+			System.out.println("Tu tarjeta no estÃ¡ activada. Para usar este servicio es necesario que la tarjeta estÃ© activada.");
+			System.out.println("Para mÃ¡s informaciÃ³n dirigase al Ayuntamiento.");
 		}
 	}
 	
