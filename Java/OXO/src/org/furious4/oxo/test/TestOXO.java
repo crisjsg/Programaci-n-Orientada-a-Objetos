@@ -11,15 +11,16 @@ import org.junit.BeforeClass;
 public class TestOXO {
 	
 	Fichas tablero[][] = new Fichas[3][3];
+	Fichas ficha = Fichas.X;
 	
 	@BeforeClass
-	/*public static void setUpBeforeClass(){
+	public static void setUpBeforeClass(){
 		Fichas tablero[][] = new Fichas[3][3];
-	}*/
+	}
 	
 	
 	@Test
-	public static void DadaUnaFichaCuandoFichaFueraDeFilaEntoncesDevuelvoFalse(){
+	public void DadaUnaFichaCuandoFichaFueraDeFilaEntoncesDevuelvoFalse(){
 		assertFalse(OXO.ponerFicha(4, 1));
 		assertFalse(OXO.ponerFicha(1, 4));
 	}
@@ -34,5 +35,17 @@ public class TestOXO {
 			}
 		}
 	}
+	
+	@Test
+	public void DadaElPrimerTurnoCuandoElSiguienteJugadorEntoncesLaFichaEsX(){
+		OXO.ponerFicha(1, 1);
+		assertEquals(Fichas.O, OXO.siguienteJugador());
+	}
+	
+	/*@Test
+	public void CuandoSeRealizaLaJugadaEntoncesNoHayGanador(){
+		String actual = OXO.ponerFicha(1, 1);
+		assertEqual("No hay ganador", actual);
+	}*/
 
 }	

@@ -3,6 +3,7 @@ package org.furious4.oxo.logica;
 public class OXO {
 	int fila = 0;
 	int columna = 0;
+	static Fichas ultimoJugador = siguienteJugador();
 	
 	public enum  Fichas{
 		X,O;
@@ -40,5 +41,12 @@ public class OXO {
 				tablero[i][j] = null;
 			}
 		}
+	}
+	
+	public static Fichas siguienteJugador(){
+		if(ultimoJugador == Fichas.X){
+			return Fichas.O;
+		}
+		return Fichas.X;
 	}
 }
