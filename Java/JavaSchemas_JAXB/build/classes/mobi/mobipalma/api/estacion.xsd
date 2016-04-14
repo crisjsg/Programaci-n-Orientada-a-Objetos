@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="https://api.mobipalma.mobi/docs/" 
+	xmlns:emt="https://api.mobipalma.mobi/docs/" 
+	elementFormDefault="unqualified">
+
+	<!-- Elemento raiz -->
+	<xs:element name="estacion">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="id" default="1">
+					<xs:simpleType>
+						<xs:restriction base="xs:integer">
+							<xs:minInclusive value="1"></xs:minInclusive>
+							<xs:maxInclusive value="100"></xs:maxInclusive>
+						</xs:restriction>			
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="direccion">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="Manacor 50"></xs:enumeration>
+							<xs:enumeration value="Plaza España"></xs:enumeration>
+							<xs:enumeration value="Plaza Paris"></xs:enumeration>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="numeroAnclajes" default="10">
+					<xs:simpleType>
+						<xs:restriction base="xs:integer">
+							<xs:minInclusive value="10"></xs:minInclusive>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="anclajes" default="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:integer">
+							<xs:minInclusive value="0"></xs:minInclusive>
+							<xs:maxInclusive value="10"></xs:maxInclusive>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	
+	
+	
+	
+	
+	
+</xs:schema>
