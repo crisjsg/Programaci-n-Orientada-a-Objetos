@@ -7,9 +7,11 @@
 
 	<!-- Elemento raiz -->
 	<xs:element name="estacion" type="emt:tipoEstacion"></xs:element>
+	
+	<!-- Elemento complejo -->
 	<xs:complexType name="tipoEstacion">
 		<xs:sequence>
-			<xs:element name="id" default="1">
+			<xs:element name="id">
 				<xs:simpleType>
 					<xs:restriction base="xs:integer">
 						<xs:minInclusive value="1"></xs:minInclusive>
@@ -26,14 +28,7 @@
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
-			<xs:element name="numeroAnclajes" default="10">
-				<xs:simpleType>
-					<xs:restriction base="xs:integer">
-						<xs:minInclusive value="10"></xs:minInclusive>
-					</xs:restriction>
-				</xs:simpleType>
-			</xs:element>
-			<xs:element name="anclajes" default="0">
+			<xs:element name="numeroAnclajes">
 				<xs:simpleType>
 					<xs:restriction base="xs:integer">
 						<xs:minInclusive value="0"></xs:minInclusive>
@@ -41,14 +36,35 @@
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
+			<xs:element name="anclajes"> <!-- Utilizo el tipo Vector de los Schema Patterns -->
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="bicicleta" type="emt:restriccionBicicleta" minOccurs="5" maxOccurs="unbounded"></xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
 			</xs:sequence>
 	</xs:complexType>
 	
+	<!-- Elemento Simple -->
+	<xs:simpleType name="restriccionBicicleta">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="\d{3}|null"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
 	
 	
+	<!-- Prueba de restriccion: 
 	
+	<xs:simpleType name="restriccionBicicleta">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="null"></xs:enumeration>
+			<xs:enumeration value="250"></xs:enumeration>
+			<xs:enumeration value="270"></xs:enumeration>
+			<xs:enumeration value="290"></xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
 	
-	
-	
-	
+	-->
+
 </xs:schema>
