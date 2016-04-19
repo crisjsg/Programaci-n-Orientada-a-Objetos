@@ -6,14 +6,14 @@
 	elementFormDefault="unqualified">
 
 	<!-- Elemento raiz -->
-	<xs:element name="estacion" type="emt:tipoEstacion"></xs:element>
+	<xs:element name="estacion" type="emt:Estacion"></xs:element>
 	
 	<!-- Elemento complejo -->
-	<xs:complexType name="tipoEstacion">
+	<xs:complexType name="Estacion">
 		<xs:sequence>
 			<xs:element name="id">
 				<xs:simpleType>
-					<xs:restriction base="xs:integer">
+					<xs:restriction base="xs:int">
 						<xs:minInclusive value="1"></xs:minInclusive>
 						<xs:maxInclusive value="100"></xs:maxInclusive>
 					</xs:restriction>			
@@ -30,7 +30,7 @@
 			</xs:element>
 			<xs:element name="numeroAnclajes">
 				<xs:simpleType>
-					<xs:restriction base="xs:integer">
+					<xs:restriction base="xs:int">
 						<xs:minInclusive value="0"></xs:minInclusive>
 						<xs:maxInclusive value="10"></xs:maxInclusive>
 					</xs:restriction>
