@@ -1,0 +1,10 @@
+eclipse.preferences.version=1
+encoding//src/mobi/mobipalma/api/BicipalmaSOAPImpl.java=UTF-8
+encoding//src/mobi/mobipalma/api/BicipalmaSOAPSkeleton.java=UTF-8
+encoding//src/mobi/mobipalma/api/BicipalmaSOAPStub.java=UTF-8
+encoding//src/mobi/mobipalma/api/Bicipalma_PortType.java=UTF-8
+encoding//src/mobi/mobipalma/api/Bicipalma_Service.java=UTF-8
+encoding//src/mobi/mobipalma/api/Bicipalma_ServiceLocator.java=UTF-8
+encoding//src/mobi/mobipalma/api/Estacion.java=UTF-8
+encoding//src/mobi/mobipalma/api/EstadoEstacionRequest.java=UTF-8
+encoding//src/mobi/mobipalma/api/EstadoEstacionResponse.java=UTF-8

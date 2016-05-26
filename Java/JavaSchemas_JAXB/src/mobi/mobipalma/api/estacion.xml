@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<emt:estacion xmlns:emt="https://api.mobipalma.mobi/docs/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://api.mobipalma.mobi/docs/ estacion.xsd ">
+<emt:estacion 
+xmlns:emt="https://api.mobipalma.mobi/docs/" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="https://api.mobipalma.mobi/docs/ estacion.xsd ">
   <id>1</id>
   <direccion>Manacor 50</direccion>
   <numeroAnclajes>0</numeroAnclajes>
